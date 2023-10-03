@@ -1,3 +1,4 @@
+from modulo import soma
 def multiplicacao(x,y):
     return x*y
 
@@ -15,5 +16,6 @@ def fala_oi():
 
 from modulos_packege.modulo2 import *
 
+print(soma(1,8))
 
 
