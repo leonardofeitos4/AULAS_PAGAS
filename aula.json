@@ -1,0 +1,44 @@
+# json.dumps e json.loads com strings + digitação.TypedDict
+# Ao converter de Python para JSON:
+# Python JSON
+# objeto dict
+# lista, matriz de tupla
+# sequência de caracteres
+# int, número flutuante
+# Verdade verdade
+# falso falso
+# Nenhum nulo
+importar  json
+# de pprint import pprint
+da  digitação  importar  TypedDict
+
+
+classe  Filme ( TypedDict ):
+    título : estre
+    título_original : str
+    is_movie : bool
+    imdb_rating : flutuante
+    ano : int
+    caracteres : lista [ str ]
+    orçamento : Nenhum  |  flutuador
+import json
+
+string_json  =  '''
+{
+  "título": "O Senhor dos Anéis: A Sociedade do Anel",
+  "original_title": "O Senhor dos Anéis: A Sociedade do Anel",
+  "is_movie": verdadeiro,
+  "imdb_rating": 8,8,
+  "ano": 2001,
+  "personagens": ["Frodo", "Sam", "Gandalf", "Legolas", "Boromir"],
+  "orçamento": null
+}
+'''
+filme : Filme  =  json . cargas ( string_json )
+# pprint(filme, largura=40)
+# print(filme['título'])
+# print(filme['personagens'][0])
+# print(filme['ano'] + 10)
+
+json_string  =  json . dumps ( filme , ensure_ascii = False , indent = 2 )
+imprimir ( json_string )
