@@ -11,9 +11,34 @@ print(caminho_arquivo)
 
 
 #with ele ja abre e fecha
-with open(caminho_arquivo, 'w') as arquivo:
-    print('oi')
 
-caminho_arquivo = 'aula116.txt'
+#otav.miranda site dele
+
+caminho_arquivo = 'caminho.txt'
+#w apaga tudo e bota o que eu peço
+#A ele acrescenta com o que ja está lá
+with open(caminho_arquivo, 'w+',encoding='utf8') as arquivo:
+    arquivo.write('LEONARDOOOO FEITOSAAAA\n')
+    arquivo.write('LEONARDOOOO FEITOSAAão\n')
+    arquivo.writelines(
+        ('Linha 3\n', 'Linha 4\n')
+    )
+    arquivo.seek(0, 0)
+    print(arquivo.read())
+    print('Lendo')
+    arquivo.seek(0, 0)
+    print(arquivo.readline(), end='')
+    #strip remove os espaços do começo e do fim
+    print(arquivo.readline().strip())
+    print(arquivo.readline().strip())
+
+    print('READLINES')
+    arquivo.seek(0, 0)
+    for linha in arquivo.readlines():
+        print(linha.strip())
 
 
+print('#' * 10)
+
+with open(caminho_arquivo, 'r') as arquivo:
+    print(arquivo.read())
