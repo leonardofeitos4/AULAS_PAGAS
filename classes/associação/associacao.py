@@ -9,7 +9,7 @@
 # o ciclo de vida de outro objeto.
 
 
-class escritor:
+class Escritor:
     def __init__(self, nome) -> None:
         self.nome = nome
         self._ferramenta = None
@@ -30,7 +30,7 @@ class FerramentaDeEscrever:
         return f'{self.nome} Está escrevendo'
 
 
-escritor = escritor('Leo')
+escritor = Escritor('Leo')
 caneta = FerramentaDeEscrever('BIC')
 maquina_de_escrever = FerramentaDeEscrever('Maquina')
 escritor.ferramenta = maquina_de_escrever
