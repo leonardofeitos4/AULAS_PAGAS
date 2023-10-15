@@ -13,14 +13,14 @@
 # Código cliente - é o código que usa seu código
 class Caneta:
     def __init__(self, cor):
-        self.cor_tinta = cor
+        self.cor = cor
 
 
 #Usa para proteger o codigo cliente e precisar alterar so abaio do @property
     @property
-    def cor(self):
+    def tinta(self):
         print('PROPERTY')
-        return self.cor_tinta
+        return self.cor
 
     @property
     def cor_tampa(self):
@@ -30,7 +30,7 @@ class Caneta:
 
 
 caneta = Caneta('Azul')
-print(caneta.cor)
+print(caneta.tinta)
 print(caneta.cor)
 print(caneta.cor)
 print(caneta.cor)
