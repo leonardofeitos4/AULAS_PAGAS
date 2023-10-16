@@ -41,9 +41,16 @@ class Fabricante:
         self.nome = nome
 
 civic = Carro("O carro é: Civic,")     
-honda = Fabricante("O fabricante é da : Honda")
-motor = Motor("O motor é: 1.5L Turbo 16V DOHC Duplo VTC")
-civic.fabricante = honda
-civic.motor = motor
-print(civic.nome, civic.fabricante.nome, civic.motor.nome)
-print(civic.nome, honda.nome, motor.nome)
+fabricante_civic = Fabricante("O fabricante é da : Honda,")
+motor_civc = Motor("O motor é: 1.5L Turbo 16V DOHC Duplo VTC")
+# civic.fabricante = fabricante_civic
+# civic.motor = motor_civc
+print(civic.nome, fabricante_civic.nome, motor_civc.nome)
+
+uno = Carro("O carro é: Uno,")     
+fabricante_uno = Fabricante("O fabricante é da : Fiat,")
+motor_uno = Motor("O motor é: Firefly 1.0 de três cilindros")
+uno = fabricante_uno
+uno.motor = motor_uno
+
+print(uno.nome, fabricante_uno.nome, uno.motor.nome)
